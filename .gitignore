@@ -1,0 +1,12 @@
+.vscode
+
+**/.DS_Store
+
+**/node_modules
+**/node_modules
+
+**/dist/
+**/target
+*.node
+
+**/npm-debug.log*
