@@ -1,0 +1,18 @@
+{
+  "name": "rsHook-freebsd-x64",
+  "version": "0.0.0",
+  "os": [
+    "freebsd"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "rsHook.freebsd-x64.node",
+  "files": [
+    "rsHook.freebsd-x64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
