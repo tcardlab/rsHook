@@ -1,7 +1,9 @@
 import test from 'ava'
 
-import { sum } from '../index.js'
+import { rsHook } from '../index.js'
 
-test('sum from native', (t) => {
-  t.is(sum(1, 2), 3)
+test('rsHook from native', (t) => {
+  const isThreadBlocked = ()=>"Thread not blocked!"
+  rsHook(console.log)
+  t.is(isThreadBlocked(), "Thread not blocked!")
 })
