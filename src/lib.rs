@@ -2,17 +2,28 @@ use node_bindgen::derive::node_bindgen;
 
 mod keys;
 
-use rdev::{listen, Event};
+use rdev::{listen, Event, Button};
+
+use std::time::SystemTime;
+
+fn index(button: Button) -> &'static str {
+  match button {
+    Button::Left => "0",
+    Button::Right => "1",
+    Button::Middle => "2",
+    _=> ""
+  }
+}
 
 /// Handles callback event for user input events
 #[node_bindgen(name = "rsHook")]
 async fn rs_hook<F: Fn(Vec<String>) + 'static>(func: F) {
   
-  pub fn pre_handle_event(event: Event) -> Vec<String> {
+  fn pre_handle_event(event: Event) -> Vec<String> {
     let s;
-    let c: String;
+    let c;
     let t;
-  
+    // println!("{:?}", event);
     match event.event_type {
       rdev::EventType::KeyPress(_key) => {
         s = format!("{:?}", _key );
@@ -28,27 +39,29 @@ async fn rs_hook<F: Fn(Vec<String>) + 'static>(func: F) {
   
       rdev::EventType::ButtonPress(_button) => {
         s = format!("{:?}", _button );
-        c = "0".to_string();
+        c = index(_button);
         t = "mousedown";
       }
         
       rdev::EventType::ButtonRelease(_button) => {
         s = format!("{:?}", _button );
-        c = "0".to_string();
+        c = index(_button);
         t = "mouseup";
       }
   
       _ => {
         s = "Error".to_string();
-        c = "".to_string();
+        c = "";
         t = "Error";
       }
     }
   
-    vec![
+    let time = event.time.duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis();
+    vec![ 
       (&t).to_string(),
       (&c).to_string(),
-      (&s).to_string()
+      time.to_string(),
+      (&s).to_string() 
     ]
   }
 
