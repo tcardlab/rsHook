@@ -1,5 +1,5 @@
 {
-  "name": "rsHook",
+  "name": "@tclab/rsHook",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
@@ -33,8 +33,10 @@
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",
-    "//test": "ava",
-    "test": "node ./__test__/index.js",
+    "test": "ava",
+    "demo": "node ./__test__/index.js",
     "version": "napi version"
-  }
+  },
+  "repository": "https://github.com/tcardlab/rsHook",
+  "description": "rudimentary ioHook replacement written in rust"
 }

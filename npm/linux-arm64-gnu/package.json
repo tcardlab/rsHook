@@ -1,5 +1,5 @@
 {
-  "name": "rsHook-linux-arm64-gnu",
+  "name": "@tclab/rsHook-linux-arm64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -11,10 +11,12 @@
   "files": [
     "rsHook.linux-arm64-gnu.node"
   ],
+  "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
+  "repository": "https://github.com/tcardlab/rsHook",
   "libc": [
     "glibc"
   ]

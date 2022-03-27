@@ -1,5 +1,5 @@
 {
-  "name": "rsHook-android-arm64",
+  "name": "@tclab/rsHook-android-arm64",
   "version": "0.0.0",
   "os": [
     "android"
@@ -11,8 +11,10 @@
   "files": [
     "rsHook.android-arm64.node"
   ],
+  "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  }
+  },
+  "repository": "https://github.com/tcardlab/rsHook"
 }

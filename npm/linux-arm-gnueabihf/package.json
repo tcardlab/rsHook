@@ -1,5 +1,5 @@
 {
-  "name": "rsHook-linux-arm-gnueabihf",
+  "name": "@tclab/rsHook-linux-arm-gnueabihf",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -11,8 +11,10 @@
   "files": [
     "rsHook.linux-arm-gnueabihf.node"
   ],
+  "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  }
+  },
+  "repository": "https://github.com/tcardlab/rsHook"
 }

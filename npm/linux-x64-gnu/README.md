@@ -1,3 +1,3 @@
-# `rsHook-linux-x64-gnu`
+# `@tclab/rsHook-linux-x64-gnu`
 
-This is the **x86_64-unknown-linux-gnu** binary for `rsHook`
+This is the **x86_64-unknown-linux-gnu** binary for `@tclab/rsHook`
