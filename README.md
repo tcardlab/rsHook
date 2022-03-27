@@ -10,11 +10,14 @@ THIS IS NOT THE MAIN README, THIS IS JUST THE `NAPI-RS` BRANCH
     npm i @tcardlab/rshook
 
 
-## Build Yourself
-    npm install -g @napi-rs/cli
-    npm i
-    npm run build
-    npm run demo
+## Build rsHook Yourself:
+Assuming you are already in this directory
+```shell
+  $npm install -g @napi-rs/cli
+  $npm i
+  $npm run build
+  $npm run demo
+```
 
 
 ## Basic Use:
