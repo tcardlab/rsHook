@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: rsHook
+  APP_NAME: rshook
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 'on':
   push:

@@ -1,3 +1,3 @@
-# `@tclab/rsHook-linux-arm-gnueabihf`
+# `rshook-linux-arm-gnueabihf`
 
-This is the **armv7-unknown-linux-gnueabihf** binary for `@tclab/rsHook`
+This is the **armv7-unknown-linux-gnueabihf** binary for `rshook`

@@ -1,3 +1,3 @@
-# `@tclab/rsHook-android-arm64`
+# `rshook-android-arm64`
 
-This is the **aarch64-linux-android** binary for `@tclab/rsHook`
+This is the **aarch64-linux-android** binary for `rshook`

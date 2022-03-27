@@ -1,5 +1,5 @@
 {
-  "name": "@tclab/rsHook-android-arm-eabi",
+  "name": "rshook-android-arm-eabi",
   "version": "0.0.1",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm"
   ],
-  "main": "rsHook.android-arm-eabi.node",
+  "main": "rshook.android-arm-eabi.node",
   "files": [
-    "rsHook.android-arm-eabi.node"
+    "rshook.android-arm-eabi.node"
   ],
   "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",

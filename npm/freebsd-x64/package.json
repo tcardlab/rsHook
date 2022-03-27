@@ -1,5 +1,5 @@
 {
-  "name": "@tclab/rsHook-freebsd-x64",
+  "name": "rshook-freebsd-x64",
   "version": "0.0.1",
   "os": [
     "freebsd"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "rsHook.freebsd-x64.node",
+  "main": "rshook.freebsd-x64.node",
   "files": [
-    "rsHook.freebsd-x64.node"
+    "rshook.freebsd-x64.node"
   ],
   "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",

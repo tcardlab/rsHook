@@ -1,3 +1,3 @@
-# `@tclab/rsHook-freebsd-x64`
+# `rshook-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `@tclab/rsHook`
+This is the **x86_64-unknown-freebsd** binary for `rshook`
