@@ -1,3 +1,3 @@
-# `@tcardlab/rshook-darwin-arm64`
+# `@tcardlab/rsHook-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `@tcardlab/rshook`
+This is the **aarch64-apple-darwin** binary for `@tcardlab/rsHook`

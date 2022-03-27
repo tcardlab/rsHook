@@ -1,5 +1,5 @@
 {
-  "name": "@tcardlab/rshook-darwin-x64",
+  "name": "@tcardlab/rsHook-darwin-x64",
   "version": "0.0.4",
   "os": [
     "darwin"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "rshook.darwin-x64.node",
+  "main": "rsHook.darwin-x64.node",
   "files": [
-    "rshook.darwin-x64.node"
+    "rsHook.darwin-x64.node"
   ],
   "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",

@@ -1,10 +1,10 @@
 {
-  "name": "@tcardlab/rshook",
+  "name": "@tcardlab/rsHook",
   "version": "0.0.4",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
-    "name": "rshook",
+    "name": "rsHook",
     "triples": {
       "additional": [
         "aarch64-apple-darwin",

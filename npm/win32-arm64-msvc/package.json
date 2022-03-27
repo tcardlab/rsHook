@@ -1,5 +1,5 @@
 {
-  "name": "@tcardlab/rshook-win32-arm64-msvc",
+  "name": "@tcardlab/rsHook-win32-arm64-msvc",
   "version": "0.0.4",
   "os": [
     "win32"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "rshook.win32-arm64-msvc.node",
+  "main": "rsHook.win32-arm64-msvc.node",
   "files": [
-    "rshook.win32-arm64-msvc.node"
+    "rsHook.win32-arm64-msvc.node"
   ],
   "description": "rudimentary ioHook replacement written in rust",
   "license": "MIT",

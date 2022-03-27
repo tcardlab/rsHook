@@ -2,7 +2,7 @@
 rudimentary ioHook replacement written in Rust for Node
 
 ## Build-Free Package (Win/Mac only)
-    npm i @tcardlab/rshook
+    npm i @tcardlab/rsHook
 
 
 ## Build Yourself

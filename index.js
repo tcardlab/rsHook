@@ -25,24 +25,24 @@ switch (platform) {
   case 'android':
     switch (arch) {
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'rshook.android-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'rsHook.android-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.android-arm64.node')
+            nativeBinding = require('./rsHook.android-arm64.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-android-arm64')
+            nativeBinding = require('@tcardlab/rsHook-android-arm64')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'rshook.android-arm-eabi.node'))
+        localFileExisted = existsSync(join(__dirname, 'rsHook.android-arm-eabi.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.android-arm-eabi.node')
+            nativeBinding = require('./rsHook.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-android-arm-eabi')
+            nativeBinding = require('@tcardlab/rsHook-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -56,13 +56,13 @@ switch (platform) {
     switch (arch) {
       case 'x64':
         localFileExisted = existsSync(
-          join(__dirname, 'rshook.win32-x64-msvc.node')
+          join(__dirname, 'rsHook.win32-x64-msvc.node')
         )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.win32-x64-msvc.node')
+            nativeBinding = require('./rsHook.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-win32-x64-msvc')
+            nativeBinding = require('@tcardlab/rsHook-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -70,13 +70,13 @@ switch (platform) {
         break
       case 'ia32':
         localFileExisted = existsSync(
-          join(__dirname, 'rshook.win32-ia32-msvc.node')
+          join(__dirname, 'rsHook.win32-ia32-msvc.node')
         )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.win32-ia32-msvc.node')
+            nativeBinding = require('./rsHook.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-win32-ia32-msvc')
+            nativeBinding = require('@tcardlab/rsHook-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -84,13 +84,13 @@ switch (platform) {
         break
       case 'arm64':
         localFileExisted = existsSync(
-          join(__dirname, 'rshook.win32-arm64-msvc.node')
+          join(__dirname, 'rsHook.win32-arm64-msvc.node')
         )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.win32-arm64-msvc.node')
+            nativeBinding = require('./rsHook.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-win32-arm64-msvc')
+            nativeBinding = require('@tcardlab/rsHook-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -103,12 +103,12 @@ switch (platform) {
   case 'darwin':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'rshook.darwin-x64.node'))
+        localFileExisted = existsSync(join(__dirname, 'rsHook.darwin-x64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.darwin-x64.node')
+            nativeBinding = require('./rsHook.darwin-x64.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-darwin-x64')
+            nativeBinding = require('@tcardlab/rsHook-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -116,13 +116,13 @@ switch (platform) {
         break
       case 'arm64':
         localFileExisted = existsSync(
-          join(__dirname, 'rshook.darwin-arm64.node')
+          join(__dirname, 'rsHook.darwin-arm64.node')
         )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.darwin-arm64.node')
+            nativeBinding = require('./rsHook.darwin-arm64.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-darwin-arm64')
+            nativeBinding = require('@tcardlab/rsHook-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -136,12 +136,12 @@ switch (platform) {
     if (arch !== 'x64') {
       throw new Error(`Unsupported architecture on FreeBSD: ${arch}`)
     }
-    localFileExisted = existsSync(join(__dirname, 'rshook.freebsd-x64.node'))
+    localFileExisted = existsSync(join(__dirname, 'rsHook.freebsd-x64.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./rshook.freebsd-x64.node')
+        nativeBinding = require('./rsHook.freebsd-x64.node')
       } else {
-        nativeBinding = require('@tcardlab/rshook-freebsd-x64')
+        nativeBinding = require('@tcardlab/rsHook-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -152,26 +152,26 @@ switch (platform) {
       case 'x64':
         if (isMusl()) {
           localFileExisted = existsSync(
-            join(__dirname, 'rshook.linux-x64-musl.node')
+            join(__dirname, 'rsHook.linux-x64-musl.node')
           )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./rshook.linux-x64-musl.node')
+              nativeBinding = require('./rsHook.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@tcardlab/rshook-linux-x64-musl')
+              nativeBinding = require('@tcardlab/rsHook-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
           localFileExisted = existsSync(
-            join(__dirname, 'rshook.linux-x64-gnu.node')
+            join(__dirname, 'rsHook.linux-x64-gnu.node')
           )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./rshook.linux-x64-gnu.node')
+              nativeBinding = require('./rsHook.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@tcardlab/rshook-linux-x64-gnu')
+              nativeBinding = require('@tcardlab/rsHook-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -181,26 +181,26 @@ switch (platform) {
       case 'arm64':
         if (isMusl()) {
           localFileExisted = existsSync(
-            join(__dirname, 'rshook.linux-arm64-musl.node')
+            join(__dirname, 'rsHook.linux-arm64-musl.node')
           )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./rshook.linux-arm64-musl.node')
+              nativeBinding = require('./rsHook.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@tcardlab/rshook-linux-arm64-musl')
+              nativeBinding = require('@tcardlab/rsHook-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
           localFileExisted = existsSync(
-            join(__dirname, 'rshook.linux-arm64-gnu.node')
+            join(__dirname, 'rsHook.linux-arm64-gnu.node')
           )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./rshook.linux-arm64-gnu.node')
+              nativeBinding = require('./rsHook.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@tcardlab/rshook-linux-arm64-gnu')
+              nativeBinding = require('@tcardlab/rsHook-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -209,13 +209,13 @@ switch (platform) {
         break
       case 'arm':
         localFileExisted = existsSync(
-          join(__dirname, 'rshook.linux-arm-gnueabihf.node')
+          join(__dirname, 'rsHook.linux-arm-gnueabihf.node')
         )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./rshook.linux-arm-gnueabihf.node')
+            nativeBinding = require('./rsHook.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('@tcardlab/rshook-linux-arm-gnueabihf')
+            nativeBinding = require('@tcardlab/rsHook-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
