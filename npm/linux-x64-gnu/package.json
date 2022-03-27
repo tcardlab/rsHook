@@ -1,5 +1,5 @@
 {
-  "name": "rshook-linux-x64-gnu",
+  "name": "@tcardlab/rshook-linux-x64-gnu",
   "version": "0.0.2",
   "os": [
     "linux"

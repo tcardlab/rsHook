@@ -1,5 +1,5 @@
 {
-  "name": "rshook-darwin-arm64",
+  "name": "@tcardlab/rshook-darwin-arm64",
   "version": "0.0.2",
   "os": [
     "darwin"

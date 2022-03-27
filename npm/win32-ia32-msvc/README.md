@@ -1,3 +1,3 @@
-# `rshook-win32-ia32-msvc`
+# `@tcardlab/rshook-win32-ia32-msvc`
 
-This is the **i686-pc-windows-msvc** binary for `rshook`
+This is the **i686-pc-windows-msvc** binary for `@tcardlab/rshook`
