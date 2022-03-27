@@ -1,0 +1,14 @@
+[package]
+edition = "2021"
+name = "rsHook"
+version = "0.0.0"
+
+[dependencies]
+node-bindgen = { version = "4.0" }
+rdev = "0.5.1"
+
+[build-dependencies]
+node-bindgen = { version = "4.0", features = ["build"] }
+
+[lib]
+crate-type = ["cdylib"]

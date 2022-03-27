@@ -1,0 +1,22 @@
+{
+  "name": "@tcardlab/rshook",
+  "version": "0.0.3",
+  "main": "index.node",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "scripts": {
+    "build": "nj-cli build -o=./",
+    "release": "nj-cli build --release -o=./",
+    "test": "",
+    "demo": "node ./__test__/index.js",
+    "version": "napi version"
+  },
+  "repository": "https://github.com/tcardlab/rsHook/tree/node-bindgen",
+  "description": "rudimentary ioHook replacement written in rust"
+}
+
+
+
+
+
