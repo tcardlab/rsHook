@@ -77,6 +77,7 @@ If you want to create a simple wrapper to match ioHook:
  - [ ] Use `@rsHook/napi` and `@rsHook/bindgen` org-scoping
  - [ ] [Consider run-on-arch-action for CI](https://github.com/uraimo/run-on-arch-action)
  - [ ] Fix mac `calling TIS/TSM in non-main thread`. [solution?](https://github.com/open-trade/rdev/commit/8962d0a27f70bc727e1e2dcd51b61d390ccfd6f3)
+ - [ ] A termination feature (could cancel thread, but macs don't like running it in thread... so maybe [process::exit(1) or test if panic works](https://stackoverflow.com/questions/21569718/how-do-i-exit-a-rust-program-early-from-outside-the-main-function))
 
 **Node-Bindgen**
  - [ ] CI for mac, win, and linux
