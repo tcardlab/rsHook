@@ -1,65 +1,67 @@
 #![deny(clippy::all)]
 
 mod keys;
+use keys::{scan_code, index};
 
 #[macro_use]
 extern crate napi_derive;
 
 use napi::{JsFunction, Result, JsString};
-use napi::{threadsafe_function::{ErrorStrategy, ThreadsafeFunction, ThreadsafeFunctionCallMode, ThreadSafeCallContext}};
+use napi::{threadsafe_function::{
+  ErrorStrategy, ThreadsafeFunction, ThreadsafeFunctionCallMode, ThreadSafeCallContext
+}};
 
-use rdev::{listen, Event, Button};
+use rdev::{listen, Event, 
+  EventType::{KeyPress, KeyRelease, ButtonPress, ButtonRelease}
+};
 
 use std::time::SystemTime;
+const ZERO:SystemTime = SystemTime::UNIX_EPOCH;
 
-fn index(button: Button) -> &'static str {
-  match button {
-    Button::Left => "0",
-    Button::Right => "1",
-    Button::Middle => "2",
-    _=> ""
-  }
-}
 
 fn pre_handle_event(event: Event) -> Vec<String> {
-  let s;
-  let c;
-  let t;
+  let (s, c, t);
+
   // println!("{:?}", event);
   match event.event_type {
-    rdev::EventType::KeyPress(_key) => {
-      s = format!("{:?}", _key );
-      c = keys::keys::scan_code(_key);
-      t = "keydown";
-    }
-    
-    rdev::EventType::KeyRelease(_key) => {
-      s = format!("{:?}", _key );
-      c = keys::keys::scan_code(_key);
-      t = "keyup";
-    }
-
-    rdev::EventType::ButtonPress(_button) => {
-      s = format!("{:?}", _button );
-      c = index(_button);
-      t = "mousedown";
-    }
+      KeyPress(_key) => {
+        s = format!("{:?}", _key );
+        c = scan_code(_key);
+        t = "keydown";
+      }
       
-    rdev::EventType::ButtonRelease(_button) => {
-      s = format!("{:?}", _button );
-      c = index(_button);
-      t = "mouseup";
+      KeyRelease(_key) => {
+        s = format!("{:?}", _key );
+        c = scan_code(_key);
+        t = "keyup";
+      }
+  
+      ButtonPress(_button) => {
+        s = format!("{:?}", _button );
+        c = index(_button);
+        t = "mousedown";
+      }
+        
+      ButtonRelease(_button) => {
+        s = format!("{:?}", _button );
+        c = index(_button);
+        t = "mouseup";
+      }
+  
+      _ => {
+        s = "Error".to_string();
+        c = "";
+        t = "Error";
+      }
     }
-
-    _ => {
-      s = "Error".to_string();
-      c = "";
-      t = "Error";
-    }
-  }
-
-  let time = event.time.duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis();
-  vec![ (&t).to_string(), (&c).to_string(), time.to_string(), (&s).to_string() ]
+  
+    let time = event.time.duration_since(ZERO).unwrap().as_millis();
+    vec![ 
+      (&t).to_string(),
+      (&c).to_string(),
+      time.to_string(),
+      (&s).to_string()
+    ]
 }
 
 
