@@ -86,3 +86,6 @@ If you want to create a simple wrapper to match ioHook:
 **Napi-rs**
  - [ ] CI Linux builds 
  - [ ] Tests
+
+**Neon**
+ - [ ] I was unsuccessful in getting this working (lifetime and mut/static conflicts between neon context and rdev callback). If you figure it out, make a pr, I'd love to see it!
