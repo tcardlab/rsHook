@@ -1,6 +1,6 @@
 {
   "name": "@tcardlab/rshook-spawn",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "rudimentary ioHook replacement via rust",
   "main": "dist",
   "scripts": {
@@ -18,7 +18,9 @@
   },
   "author": "Thomas J. Card",
   "files": [
-    "src", "build.js", "Cargo.toml"
+    "src",
+    "build.js",
+    "Cargo.toml"
   ],
   "license": "ISC",
   "bugs": {
