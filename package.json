@@ -5,7 +5,12 @@
   "main": "src",
   "scripts": {
     "start": "node src",
-    "test": "node src/test"
+    "test": "node src/test",
+    "rs:build": "cargo build",
+    "rs:run": "cargo build",
+    "rs:release": "cargo build --release",
+    "build": "node build",
+    "build:test": "node dist"
   },
   "repository": {
     "type": "git",

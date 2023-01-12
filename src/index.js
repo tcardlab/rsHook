@@ -41,3 +41,10 @@ module.exports = {
   parseInputs, // incase you just wanna wrap it
   //onErr      // prob doesn't need to be shared
 }
+
+if (require.main === module) {
+  // run as command - DEMO
+  initSpawn()
+} else {
+  // required as a module
+}
