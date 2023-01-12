@@ -3,6 +3,10 @@ rudimentary ioHook replacement
 
 **This is a demo, it is not intended for production use.**
 
+THIS IS NOT THE MAIN README, THIS IS JUST THE `SPAWN` BRANCH 
+[see main branch README here](https://github.com/tcardlab/rsHook/tree/main)
+
+
 # Getting Started From Git:
 this has no js deps aside from node itself.
 However, it does have rust deps, so make sure you have rust installed.
