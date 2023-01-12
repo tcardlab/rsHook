@@ -1,0 +1,19 @@
+{
+  "name": "rshook",
+  "version": "0.0.1",
+  "description": "rudimentary ioHook replacement",
+  "main": "src",
+  "scripts": {
+    "start": "node src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcardlab/rsHook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcardlab/rsHook/issues"
+  },
+  "homepage": "https://github.com/tcardlab/rsHook#readme"
+}
