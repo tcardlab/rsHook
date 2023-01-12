@@ -12,8 +12,7 @@ function killSpawn() {
   child.kill()  // Filicide
 }
 
-function callback(s) {
-  console.log(s)
+function parseInputs(s) {
   const [type, code, time, str] = s.split(',')
   return { type, code, time, str }
 }
@@ -23,17 +22,22 @@ function onErr(s) {
   killSpawn()
 }
 
-function initSpawn() {
+function initSpawn(cd= (e)=>{ console.log(parseInputs(e)) }, err=onErr) {
   if (child) killSpawn(); // or just return, up to you.
 
   child = spawn(resolve(__dirname, cmd));  
 
   child.stdout.on('data', out => {
-    callback(out.toString())
+    cd(out.toString().trim('\n'))
   });
   child.stderr.on('data', out => {
-    onErr(out.toString())
+    err(out.toString())
   });
 }
 
-initSpawn()
+module.exports = {
+  initSpawn,
+  killSpawn,
+  parseInputs, // incase you just wanna wrap it
+  //onErr      // prob doesn't need to be shared
+}

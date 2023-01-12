@@ -4,7 +4,8 @@
   "description": "rudimentary ioHook replacement",
   "main": "src",
   "scripts": {
-    "start": "node src"
+    "start": "node src",
+    "test": "node src/test"
   },
   "repository": {
     "type": "git",
