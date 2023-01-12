@@ -1,8 +1,8 @@
 {
-  "name": "rshook",
+  "name": "@tcardlab/rshook-spawn",
   "version": "0.0.1",
-  "description": "rudimentary ioHook replacement",
-  "main": "src",
+  "description": "rudimentary ioHook replacement via rust",
+  "main": "dist",
   "scripts": {
     "start": "node src",
     "test": "node src/test",
@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/tcardlab/rsHook.git"
   },
-  "author": "",
+  "author": "Thomas J. Card",
+  "files": [
+    "src", "build.js", "Cargo.toml"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tcardlab/rsHook/issues"
