@@ -11,10 +11,17 @@ Otherwise, you can build it yourself (See below for details). <br/>
 ```js
 function callback (error, ...event) { console.log(event) }
 ```
+<br/>
 
 **[Node-Bindgen Version:](https://github.com/tcardlab/rsHook/tree/node-bindgen)**
 
 You have to build this one yourself (See below for details).
+<br/>
+
+**[Spawn Version:](https://github.com/tcardlab/rsHook/tree/spawn)**
+
+You have to build this one yourself (See branch for details). This was prompted by [issue #1](https://github.com/tcardlab/rsHook/issues/1). 
+You can read more about the reasoning there.
 
 <br/>
 
